@@ -1,0 +1,49 @@
+{
+  "name": "node-controlport",
+  "preferGlobal": false,
+  "version": "0.0.1",
+  "author": "Itay Weinberger <itay@joo.la>",
+  "description": "Control port for your app (based on express)",
+  "engine": "node >= 0.10.x",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itayw/node-controlport.git"
+  },
+  "contributors": [
+    {
+      "name": "Itay Weinberger",
+      "email": "itay@joo.la",
+      "url": "http://joo.la"
+    }
+  ],
+  "scripts": {
+    "test": "make test",
+    "blanket": {
+      "pattern": "test",
+      "data-cover-never": "node_modules"
+    },
+    "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "main": "lib/node-controlport",
+  "keywords": [
+    "control-port",
+    "framework"
+  ],
+  "dependencies": {
+    "express": "x"
+  },
+  "devDependencies": {
+    "underscore": "1.x",
+    "mocha-lcov-reporter": "0.x",
+    "coveralls": "2.x",
+    "should": "1.x",
+    "mocha": "1.x",
+    "sinon": "1.x",
+    "chai": "1.x",
+    "sinon-chai": "2.x",
+    "blanket": "1.x",
+    "jshint": "2.x"
+  },
+  "license": "MIT"
+}
