@@ -1,5 +1,8 @@
-# node-controlport [![Build Status](https://travis-ci.org/itayw/node-controlport.png?branch=master)](https://travis-ci.org/itayw/node-controlport)
+# node-controlport 
 Add a control-port to your nodejs apps.
+
+[![Build Status][3]][4] [![dependency status][5]][6] [![dev dependency status][7]][8] [![Coverage Status][1]][2]
+[![NPM](https://nodei.co/npm/node-controlport.png)](https://nodei.co/npm/node-controlport/)
 
 When developing a nodejs application or server, it's sometimes useful to have an easy to use control-port. 
 ```node-controlport``` helps you to control the application/service behavior in a detached manner from your main application logic.
@@ -54,4 +57,11 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
+[1]: https://coveralls.io/repos/itayw/node-controlport/badge.png
+[2]: https://coveralls.io/r/itayw/node-controlport
+[3]: https://travis-ci.org/itayw/node-controlport.png
+[4]: https://travis-ci.org/itayw/node-controlport
+[5]: https://david-dm.org/itayw/node-controlport.png
+[6]: https://david-dm.org/itayw/node-controlport
+[7]: https://david-dm.org/itayw/node-controlport/dev-status.png
+[8]: https://david-dm.org/itayw/node-controlport#info=devDependencies
