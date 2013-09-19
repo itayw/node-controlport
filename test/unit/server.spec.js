@@ -4,7 +4,7 @@ var
 
 
 "use strict";
-describe("globals", function () {
+describe("server", function () {
 
   it("should run the HTTP server", function () {
     var endpoints = [];
@@ -14,11 +14,13 @@ describe("globals", function () {
         callback({status: 'Success'});
       }
     });
-    cp.start(42111, endpoints);
-    http.request('http://localhost:42111/status', function (data) {
-      console.log(data)
+    cp.start(42111, endpoints, function (err) {
+      if (err)
+        throw err;
+      http.request('http://localhost:42111/status', function (data) {
+        cp.stop();
+      });
     });
-    cp.stop();
   });
 
   it("should have a valid endpoint", function () {
@@ -29,12 +31,14 @@ describe("globals", function () {
         callback({status: 'Success'});
       }
     });
-    cp.start(42111, endpoints);
+    cp.start(42111, endpoints, function (err) {
+      if (err)
+        throw err;
 
-    http.request('http://localhost:42111/status', function (data) {
-      console.log(data)
-      cp.stop();
-    })
+      http.request('http://localhost:42111/status', function (data) {
+        cp.stop();
+      })
+    });
   });
 
 });
