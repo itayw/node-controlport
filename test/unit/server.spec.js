@@ -5,8 +5,7 @@ var
 
 "use strict";
 describe("server", function () {
-
-  it("should run the HTTP server", function () {
+  before(function (done) {
     var endpoints = [];
     endpoints.push({
       endpoint: 'status',
@@ -17,28 +16,25 @@ describe("server", function () {
     cp.start(42111, endpoints, function (err) {
       if (err)
         throw err;
-      http.request('http://localhost:42111/status', function (data) {
-        cp.stop();
-      });
+      done();
+    });
+  });
+
+  it("should run the HTTP server", function () {
+    http.request('http://localhost:42111/status', function (data) {
+      expect(data).to.be.ok;
     });
   });
 
   it("should have a valid endpoint", function () {
-    var endpoints = [];
-    endpoints.push({
-      endpoint: 'status',
-      exec: function (callback) {
-        callback({status: 'Success'});
-      }
-    });
-    cp.start(42111, endpoints, function (err) {
-      if (err)
-        throw err;
-
-      http.request('http://localhost:42111/status', function (data) {
-        cp.stop();
-      })
-    });
+    http.request('http://localhost:42111/status', function (data) {
+      expect(data).to.be.ok;
+    })
   });
+
+  after(function (done) {
+    cp.stop();
+    done();
+  })
 
 });
