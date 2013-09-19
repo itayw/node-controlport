@@ -1,9 +1,9 @@
 {
   "name": "node-controlport",
   "preferGlobal": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "Itay Weinberger <itay@joo.la>",
-  "description": "Control port for your app (based on express)",
+  "description": "Control port for your nodejs app/service",
   "engine": "node >= 0.10.x",
   "private": false,
   "repository": {
@@ -28,10 +28,10 @@
   "main": "lib/node-controlport",
   "keywords": [
     "control-port",
-    "framework"
+    "monitor"
   ],
   "dependencies": {
-    "express": "x"
+    "express": "3.x"
   },
   "devDependencies": {
     "underscore": "1.x",
