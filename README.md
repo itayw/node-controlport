@@ -1,4 +1,4 @@
-# node-controlport
+# node-controlport [![Build Status](https://travis-ci.org/itayw/node-controlport.png?branch=master)](https://travis-ci.org/itayw/node-controlport)
 Add a control-port to your nodejs apps.
 
 When developing a nodejs application or server, it's sometimes useful to have an easy to use control-port. 
