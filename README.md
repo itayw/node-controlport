@@ -1,16 +1,21 @@
-#node-controlport
-
+# node-controlport
 Add a control-port to your nodejs apps.
+
+When developing a nodejs application or server, it's sometimes useful to have an easy to use control-port. 
+```node-controlport``` helps you to control the application/service behavior in a detached manner from your main application logic.
+
+You require ```node-controlport``` and then assign endpoints to take care of incoming requests, 
+the Usage example below shows how to handle a basic ```status``` check.
 
 ## Install
 
-```
+```bash
 $ npm install node-controlport
 ```
 
 ## Usage
 
-```
+```JavaScript
 var cp = require('node-controlport');
 var cp_endpoints = [];
 
