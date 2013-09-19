@@ -20,7 +20,7 @@
   "scripts": {
     "test": "make test",
     "blanket": {
-      "pattern": "lib",
+      "pattern": "test",
       "data-cover-never": "node_modules"
     },
     "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js"
