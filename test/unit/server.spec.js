@@ -28,8 +28,7 @@ describe("server", function () {
       method: 'GET'
     };
 
-    var request = require('supertest'),
-    request = request('http://localhost:42111');
+    var request = require('supertest')('http://localhost:42111');
     request.get('/').expect(404, function (err) {
       if (err)
         return done(err);
@@ -38,16 +37,8 @@ describe("server", function () {
   });
 
   it("should have a valid endpoint", function (done) {
-    var options = {
-      hostname: 'localhost',
-      port: 42111,
-      path: '/status',
-      method: 'GET'
-    };
-
-    var request = require('supertest'),
-    request = request('http://localhost:42111/status');
-    request.get('/').expect(200).end(function (err, res) {
+    var request = require('supertest')('http://localhost:42111')
+    request.get('/status').expect(200).end(function (err, res) {
       if (err)
         return done(err)
 
