@@ -66,3 +66,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [6]: https://david-dm.org/itayw/node-controlport
 [7]: https://david-dm.org/itayw/node-controlport/dev-status.png
 [8]: https://david-dm.org/itayw/node-controlport#info=devDependencies
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/itayw/node-controlport/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
