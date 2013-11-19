@@ -1,7 +1,7 @@
 {
   "name": "node-controlport",
   "preferGlobal": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Itay Weinberger <itay@joo.la>",
   "description": "Control port for your nodejs app/service",
   "engine": "node >= 0.10.x",
